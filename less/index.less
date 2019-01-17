@@ -101,8 +101,6 @@ li{
 	.set-flex(column, space-between, center);
 	font-size: 1.4rem;
 
-	scroll-snap-type: y mandatory;
-
 	@media (min-width: 500px){
 		padding: 0 33%;
 	}
@@ -122,11 +120,14 @@ header{
 			color: white;
 			font-size: 1.2rem;
 		}
+		a:hover{
+			color: black;
+			transition-duration: 300ms;
+		}
 	}
 }
 
 section{
-	scroll-snap-align: start;
 	h1{
 		text-align: center;
 		margin-bottom: 10px;
@@ -139,7 +140,7 @@ section{
 	div{
 		.fullwidth;
 		min-height: 50%;
-		// border: 1px solid blue;
+		margin-top: 20px;
 		.set-flex(column, center, center);
 		h2{
 			font-size: 2rem;
@@ -171,6 +172,11 @@ section{
 		border: 1px solid black;
 		height: min-content;
 	}
+	a:hover, a:active{
+		background-color: black;
+		color: white;
+		transition-duration: 300ms;
+	}
 }
 
 footer{
@@ -179,6 +185,3 @@ footer{
 		margin: 20px 0;
 	}
 }
-
-
-

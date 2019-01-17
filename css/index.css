@@ -157,7 +157,6 @@ li {
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
-  scroll-snap-type: y mandatory;
 }
 @media (min-width: 500px) {
   .container {
@@ -183,8 +182,11 @@ header nav a {
   color: white;
   font-size: 1.2rem;
 }
+header nav a:hover {
+  color: black;
+  transition-duration: 300ms;
+}
 section {
-  scroll-snap-align: start;
   padding: 40px 10px;
   width: 100%;
   height: min-content;
@@ -197,6 +199,7 @@ section h1 {
 section div {
   width: 100%;
   min-height: 50%;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,6 +230,12 @@ section div h2 {
   text-decoration: none;
   border: 1px solid black;
   height: min-content;
+}
+#intro a:hover,
+#intro a:active {
+  background-color: black;
+  color: white;
+  transition-duration: 300ms;
 }
 footer {
   text-align: center;
