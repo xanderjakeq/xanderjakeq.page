@@ -157,7 +157,7 @@ li {
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: y mandatory;
 }
 @media (min-width: 500px) {
   .container {

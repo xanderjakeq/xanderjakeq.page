@@ -77,7 +77,6 @@ table {
 
 html, body {
 	height: 100%;
-	// font-size: 62.5%;
 	font-family: @main-font-stack;
 }
 
@@ -99,11 +98,10 @@ li{
 
 .container{
 	.fullwidth;
-	// border: 1px solid red;
 	.set-flex(column, space-between, center);
 	font-size: 1.4rem;
 
-	scroll-snap-type: x mandatory;
+	scroll-snap-type: y mandatory;
 
 	@media (min-width: 500px){
 		padding: 0 33%;
