@@ -119,10 +119,10 @@ header{
 			text-decoration: none;
 			color: white;
 			font-size: 1.2rem;
-		}
-		a:hover{
-			color: black;
-			transition-duration: 300ms;
+			&:hover{
+				color: black;
+				transition-duration: 300ms;
+			}
 		}
 	}
 }
@@ -132,7 +132,8 @@ section{
 		text-align: center;
 		margin-bottom: 10px;
 	}
-	padding: @header-height 10px;
+	padding: @header-height+5 10px;
+	// margin-top: @header-height;
 	.fullwidth;
 	height: min-content;
 	border-bottom: 1px solid black;
@@ -171,12 +172,13 @@ section{
 		text-decoration: none;
 		border: 1px solid black;
 		height: min-content;
+		&:hover, &:active{
+			background-color: black;
+			color: white;
+			transition-duration: 300ms;
+		}
 	}
-	a:hover, a:active{
-		background-color: black;
-		color: white;
-		transition-duration: 300ms;
-	}
+	
 }
 
 footer{
