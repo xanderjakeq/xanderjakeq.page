@@ -219,8 +219,7 @@ section div h2 {
   }
 }
 #intro {
-  min-height: fit-content;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
