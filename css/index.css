@@ -196,6 +196,10 @@ section h1 {
   text-align: center;
   margin-bottom: 10px;
 }
+section a {
+  color: black;
+  cursor: pointer;
+}
 section div {
   width: 100%;
   min-height: 50%;
@@ -229,7 +233,7 @@ section div h2 {
   max-width: 30%;
   border-radius: 50%;
 }
-#intro a {
+#intro #a {
   text-decoration: none;
   border: 1px solid black;
   height: min-content;
@@ -237,8 +241,8 @@ section div h2 {
   margin-top: 20px;
   padding: 5px;
 }
-#intro a:hover,
-#intro a:active {
+#intro #a:hover,
+#intro #a:active {
   background-color: black;
   color: white;
   transition-duration: 300ms;
@@ -264,7 +268,7 @@ section div h2 {
 }
 @media (min-width: 500px) {
   #intro .portfolio div {
-    width: 50%;
+    width: 49%;
   }
 }
 #intro .portfolio img {
@@ -279,11 +283,11 @@ section div h2 {
   }
 }
 #intro .active {
-  height: 1500px;
+  height: 500px;
 }
 @media (min-width: 800px) {
   #intro .active {
-    height: 1050px;
+    height: 450px;
   }
 }
 footer {
