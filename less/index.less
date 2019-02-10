@@ -48,6 +48,12 @@ table {
 	border-spacing: 0;
 }
 
+button{
+	background: none;
+	border:none;
+
+}
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
@@ -58,6 +64,9 @@ table {
 @secondary-font-stack: 'Montserrat', sans-serif;
 @header-height: 40px;
 
+@project-height-mobile: 250px;
+
+@project-height-desktop: 350px;
 
 
 // mixins
@@ -71,6 +80,13 @@ table {
 
 .fullwidth(){
 	width: 100%;
+}
+
+.portfolio-height(@numberOfProjects){
+	height: @project-height-mobile * @numberOfProjects;
+	@media (min-width: 800px){
+		height: @project-height-desktop * (@numberOfProjects/2);
+	}
 }
 
 
@@ -101,10 +117,6 @@ li{
 	.fullwidth;
 	.set-flex(column, space-between, center);
 	font-size: 1.4rem;
-
-	@media (min-width: 500px){
-		padding: 0 33%;
-	}
 }
 
 header{
@@ -134,7 +146,6 @@ section{
 		margin-bottom: 10px;
 	}
 	padding: @header-height+5 10px;
-	// margin-top: @header-height;
 	.fullwidth;
 	height: min-content;
 	border-bottom: 1px solid black;
@@ -151,15 +162,16 @@ section{
 	}
 
 	@media screen and (min-width: 500px){
-		// .set-flex(row, space-evenly, center);
+		width: 500px;
 	}
 }
 
 #intro {
+	min-height: fit-content;
 	height: 100vh;
 	.set-flex(column,space-evenly,center);
 	
-	padding: 10%;
+	padding: @header-height;
 	h1{
 		text-align: right;
 	}
@@ -173,11 +185,51 @@ section{
 		text-decoration: none;
 		border: 1px solid black;
 		height: min-content;
+		cursor: pointer;
+		margin-top: 20px;
+		padding: 5px;
 		&:hover, &:active{
 			background-color: black;
 			color: white;
 			transition-duration: 300ms;
 		}
+	}
+
+	.portfolio{
+		min-height: 0;
+		.set-flex(column,space-evenly,center);
+		height: 0;
+		overflow: hidden;
+
+		width: 70vw;
+
+		transition-duration: 1s;
+		transition-property: all;
+		div{
+			min-height: fit-content;
+			&,h2{
+				margin: 0;
+			}
+
+			@media (min-width: 500px){
+				width: 50%;
+			}
+		}
+		img{
+			border-radius: unset;
+			max-width: 100%;
+			height: auto;
+		}
+
+		@media (min-width: 800px) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			
+		}
+	}
+
+	.active{
+		.portfolio-height(6)
 	}
 	
 }
