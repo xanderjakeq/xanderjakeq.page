@@ -221,7 +221,6 @@ section div h2 {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 40px;
 }
 #intro h1 {
   text-align: right;
