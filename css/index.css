@@ -259,7 +259,7 @@ section div h2 {
   transition-property: all;
 }
 #intro .portfolio div {
-  min-height: fit-content;
+  min-height: auto;
 }
 #intro .portfolio div,
 #intro .portfolio div h2 {
