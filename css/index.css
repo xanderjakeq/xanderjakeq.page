@@ -282,11 +282,11 @@ section div h2 {
   }
 }
 #intro .active {
-  height: 500px;
+  height: 750px;
 }
 @media (min-width: 800px) {
   #intro .active {
-    height: 450px;
+    height: 675px;
   }
 }
 footer {
