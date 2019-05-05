@@ -299,6 +299,7 @@ section div h2 {
 #skills #two-column {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
 }
 #socials ul {
   display: flex;
