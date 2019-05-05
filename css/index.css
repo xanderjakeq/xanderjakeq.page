@@ -169,6 +169,7 @@ header {
   position: fixed;
   top: 0;
   background-color: cadetblue;
+  z-index: 100;
 }
 header nav {
   height: 100%;
