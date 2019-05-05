@@ -233,6 +233,7 @@ section div h2 {
   border-radius: 50%;
 }
 #intro #a {
+  position: relative;
   text-decoration: none;
   border: 1px solid black;
   height: min-content;
@@ -245,6 +246,12 @@ section div h2 {
   background-color: black;
   color: white;
   transition-duration: 300ms;
+}
+#intro #a #arrow-down {
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #intro .portfolio {
   min-height: 0;

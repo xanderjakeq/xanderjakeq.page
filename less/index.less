@@ -185,6 +185,7 @@ section{
 	}
 
 	#a{
+		position: relative;
 		text-decoration: none;
 		border: 1px solid black;
 		height: min-content;
@@ -195,6 +196,13 @@ section{
 			background-color: black;
 			color: white;
 			transition-duration: 300ms; 
+		}
+		#arrow-down{
+			position: absolute;
+			top: 125%;
+			left: 50%;
+
+			transform: translate(-50%, -50%);
 		}
 	}
 
