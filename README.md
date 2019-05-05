@@ -2,7 +2,7 @@
 
 ## Adding Projects
 
-Copy and paste project dive
+Copy and paste project div
 
     <div>
         <img src="./images/kenLog.png" alt="kenLog screenshot">
