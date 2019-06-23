@@ -174,10 +174,15 @@ section{
 
 #intro {
 	min-height: 100vh;
+	height: unset;
 	.set-flex(column,space-evenly,center);
 	
 	h1{
 		text-align: right;
+	}
+
+	p{
+		line-height: 1.45;
 	}
 	
 	img {
@@ -186,6 +191,7 @@ section{
 	}
 
 	#a{
+		text-align: center;
 		position: relative;
 		text-decoration: none;
 		border: 1px solid black;
@@ -209,7 +215,7 @@ section{
 
 	.portfolio{
 		min-height: 0;
-		.set-flex(column,space-evenly,center);
+		.set-flex(column,space-between,center);
 		height: 0;
 		overflow: hidden;
 
