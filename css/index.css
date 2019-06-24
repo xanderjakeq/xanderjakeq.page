@@ -230,6 +230,9 @@ section div h2 {
 #intro h1 {
   text-align: right;
 }
+#intro h2 {
+  margin-bottom: 10px;
+}
 #intro p {
   line-height: 1.45;
 }
@@ -296,11 +299,6 @@ section div h2 {
 }
 #intro .active {
   height: 750px;
-}
-@media (min-width: 800px) {
-  #intro .active {
-    height: 675px;
-  }
 }
 #skills #two-column {
   display: flex;

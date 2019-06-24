@@ -84,9 +84,9 @@ button{
 
 .portfolio-height(@numberOfProjects){
 	height: @project-height-mobile * @numberOfProjects;
-	@media (min-width: 800px){
-		height: @project-height-desktop * (@numberOfProjects/2);
-	}
+	// @media (min-width: 800px){
+	// 	height: @project-height-desktop * (@numberOfProjects/2);
+	// }
 }
 
 
@@ -179,6 +179,10 @@ section{
 	
 	h1{
 		text-align: right;
+	}
+
+	h2{
+		margin-bottom: 10px;
 	}
 
 	p{
