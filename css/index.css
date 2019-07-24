@@ -268,7 +268,7 @@ section div h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 0;
+  height: 15vh;
   overflow: hidden;
   width: 70vw;
   transition-duration: 1s;
