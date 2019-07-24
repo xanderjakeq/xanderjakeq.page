@@ -262,6 +262,9 @@ section div h2 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+#intro .active_toggle:hover {
+  color: white;
+}
 #intro .portfolio {
   min-height: 0;
   display: flex;

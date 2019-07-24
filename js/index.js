@@ -7,4 +7,6 @@ workButton.addEventListener('click', (e) => {
     portfolioDiv.classList.toggle('active')
     up_arrow.classList.toggle('hidden')
     down_arrow.classList.toggle('hidden')
+    up_arrow.classList.toggle('active_toggle')
+    down_arrow.classList.toggle('active_toggle')
 })
