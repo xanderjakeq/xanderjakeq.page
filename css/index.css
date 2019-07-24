@@ -300,6 +300,9 @@ section div h2 {
 #intro .active {
   height: 750px;
 }
+.hidden {
+  display: none;
+}
 #skills #two-column {
   display: flex;
   flex-direction: row;
