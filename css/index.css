@@ -273,6 +273,7 @@ section div h2 {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  align-items: flex-start;
   width: 70vw;
   transition-duration: 1s;
   transition-property: all;
@@ -301,7 +302,7 @@ section div h2 {
   }
 }
 #intro .active {
-  height: 1050px;
+  height: 1400px;
 }
 .hidden {
   display: none;
