@@ -14,13 +14,13 @@
     const getSketches = async (user_id, earliest) => {
         const local = "http://localhost:5000/";
         const prod = "https://skootches.herokuapp.com/";
-        const res = await fetch(`${prod}api/sketches?` + new URLSearchParams({
+        const res = await fetch(`${local}api/sketches?` + new URLSearchParams({
             user_id,
             earliest
         }));
         const data = await res.json();
         before = data.earliest;
-        hasMore = sketches.length < 50 && data.attachments.length > 0 ;
+        hasMore = sketches.length < 30 && data.attachments.length > 0 ;
 
         sketches = [...sketches, ...data.attachments];
 
