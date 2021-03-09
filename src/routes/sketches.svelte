@@ -14,7 +14,7 @@
     const getSketches = async (user_id, earliest) => {
         const local = "http://localhost:5000/";
         const prod = "https://skootches.herokuapp.com/";
-        const res = await fetch(`${local}api/sketches?` + new URLSearchParams({
+        const res = await fetch(`${prod}api/sketches?` + new URLSearchParams({
             user_id,
             earliest
         }));
