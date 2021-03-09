@@ -12,7 +12,9 @@
     let hasMore = true;
 
     const getSketches = async (user_id, earliest) => {
-        const res = await fetch("http://localhost:5000/api/sketches?" + new URLSearchParams({
+        const local = "http://localhost:5000/";
+        const prod = "https://skootches.herokuapp.com/";
+        const res = await fetch(`${prod}api/sketches?` + new URLSearchParams({
             user_id,
             earliest
         }));
@@ -79,7 +81,7 @@
 
 <h1>Sketches</h1>
 
-<p>recent sketches</p>
+<p>recent sketches i post on discord</p>
 <div id = "mainContainer">
     <div id="classContainer">
     {#each sketches as sketch}
