@@ -1,33 +1,33 @@
 <script>
-	let styles = {
-		'v': '#f4ed2a',
-		'note-color': '#FF5555',
-		'bg': '#AAAAAA',
-	};
+    let styles = {
+        'v': '#f4ed2a',
+        'note-color': '#FF5555',
+        'bg': '#AAAAAA',
+    };
 
-	
-	$: cssVarStyles = Object.entries(styles)
-		.map(([key, value]) => `--${key}:${value}`)
-		.join(';')
+    
+    $: cssVarStyles = Object.entries(styles)
+        .map(([key, value]) => `--${key}:${value}`)
+        .join(';')
 </script>
 
 <style>
-	.container {
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
 
         background-image: url("../images/briight.jpg");
         opacity: .8;
         background-size: cover;
         background-position: center;
-	}
+    }
 
     #heading_container {
         width: fit-content;
-		margin: .5em 0;
+        margin: .5em 0;
     }
 
     #sub_container {
@@ -38,7 +38,8 @@
         align-items: center;
         padding: 1em;
 
-        background-color: rgba(250, 250, 250, 0.5);
+        background-color: rgba(250, 250, 250, 0.1);
+        backdrop-filter: blur(2rem);
         border-radius: 5px;
     }
     
@@ -77,55 +78,56 @@
         margin-right: -.5em;
     }
 
-	h1 {
+    h1 {
         font-family: "Josefin Slab";
-		font-size: 2.8em;
-	/*	text-transform: uppercase; */
-		font-weight: 700;
+        font-size: 2.8em;
+    /*  text-transform: uppercase; */
+        font-weight: 700;
         text-align: center;
-	}
+    }
     h2 {
         font-family: "Poppins";
         font-weight: semi-bold;
         text-align: center;
     }
 
-	figure {
-		margin: 0 0 1em 0;
-	}
+    figure {
+        margin: 0 0 1em 0;
+    }
 
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
+    img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 0 1em 0;
+    }
 
-	p {
-		margin: 1em auto;
-	}
+    p {
+        margin: 1em auto;
+    }
 
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+    @media (min-width: 480px) {
+        h1 {
+            font-size: 4em;
+        }
+    }
 </style>
 
 <svelte:head>
-	<title>xanderjakeq | home</title>
+    <title>xanderjakeq | home</title>
 </svelte:head>
 
 <div class="container">
-	<div id="sub_container">
-		<div id="heading_container">
-			<h1 class = "letter_spacing_1">xanderjakeq</h1>
-			<h2 class = "letter_spacing_2">Xander Jake de los Santos</h2>
-		</div>
-		<nav>
-			<a rel=external target="_blank" href="https://blog.xanderjakeq.page/">blog</a>
-			<a rel=external target="_blank" href="https://xanderjakeq.artstation.com/">art</a>
+    <div id="sub_container">
+        <div id="heading_container">
+            <h1 class = "letter_spacing_1">xanderjakeq</h1>
+            <h2 class = "letter_spacing_2">Xander Jake de los Santos</h2>
+        </div>
+        <nav>
+            <a rel=external target="_blank" href="https://blog.xanderjakeq.page/">blog</a>
+            <a rel=external target="_blank" href="https://xanderjakeq.artstation.com/">art</a>
             <a rel=external target="_blank" href="./sketches">sketches</a>
-			<a rel=external target="_blank" href="https://github.com/xanderjakeq">github</a>
-		</nav>
-	</div>
+            <a rel=external target="_blank" href="./commissions">commission</a>
+            <a rel=external target="_blank" href="https://github.com/xanderjakeq">github</a>
+        </nav>
+    </div>
 </div>
