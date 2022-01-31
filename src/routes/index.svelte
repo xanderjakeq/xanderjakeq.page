@@ -1,15 +1,48 @@
 <script>
     let styles = {
-        'v': '#f4ed2a',
+        v: '#f4ed2a',
         'note-color': '#FF5555',
-        'bg': '#AAAAAA',
+        bg: '#AAAAAA'
     };
 
-    
     $: cssVarStyles = Object.entries(styles)
         .map(([key, value]) => `--${key}:${value}`)
-        .join(';')
+        .join(';');
 </script>
+
+<svelte:head>
+    <title>xanderjakeq | home</title>
+</svelte:head>
+
+<div class="container">
+    <div id="sub_container">
+        <div id="heading_container">
+            <h1 class="letter_spacing_1">xanderjakeq</h1>
+            <h2 class="letter_spacing_2">Xander Jake de los Santos</h2>
+        </div>
+        <nav>
+            <a
+                rel="external"
+                target="_blank"
+                href="https://blog.xanderjakeq.page/">blog</a
+            >
+            <a
+                rel="external"
+                target="_blank"
+                href="https://xanderjakeq.artstation.com/">art</a
+            >
+            <a rel="external" target="_blank" href="./sketches">sketches</a>
+            <!--
+            <a rel=external target="_blank" href="./commissions">commission</a>
+            -->
+            <a
+                rel="external"
+                target="_blank"
+                href="https://github.com/xanderjakeq">github</a
+            >
+        </nav>
+    </div>
+</div>
 
 <style>
     .container {
@@ -19,15 +52,15 @@
         justify-content: center;
         align-items: center;
 
-        background-image: url("../images/briight.jpg");
-        opacity: .8;
+        background-image: url('../images/briight.jpg');
+        opacity: 0.8;
         background-size: cover;
         background-position: center;
     }
 
     #heading_container {
         width: fit-content;
-        margin: .5em 0;
+        margin: 0.5em 0;
     }
 
     #sub_container {
@@ -42,25 +75,25 @@
         backdrop-filter: blur(2rem);
         border-radius: 5px;
     }
-    
 
     nav {
         margin-top: 1em;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
         opacity: 1;
     }
 
     nav > a {
-        font-family: "Poppins";
+        font-family: 'Poppins';
 
         font-weight: 700;
-        margin: 0 .5em;
+        margin: 0 0.5em;
         text-decoration: none;
-        opacity: .8;
+        opacity: 0.8;
 
-        transition: all .2s;
+        transition: all 0.2s;
     }
 
     nav > a:hover {
@@ -74,19 +107,19 @@
     }
 
     .letter_spacing_2 {
-        letter-spacing: .4em;
-        margin-right: -.5em;
+        letter-spacing: 0.4em;
+        margin-right: -0.5em;
     }
 
     h1 {
-        font-family: "Josefin Slab";
+        font-family: 'Josefin Slab';
         font-size: 2.8em;
-    /*  text-transform: uppercase; */
+        /*  text-transform: uppercase; */
         font-weight: 700;
         text-align: center;
     }
     h2 {
-        font-family: "Poppins";
+        font-family: 'Poppins';
         font-weight: semi-bold;
         text-align: center;
     }
@@ -111,23 +144,3 @@
         }
     }
 </style>
-
-<svelte:head>
-    <title>xanderjakeq | home</title>
-</svelte:head>
-
-<div class="container">
-    <div id="sub_container">
-        <div id="heading_container">
-            <h1 class = "letter_spacing_1">xanderjakeq</h1>
-            <h2 class = "letter_spacing_2">Xander Jake de los Santos</h2>
-        </div>
-        <nav>
-            <a rel=external target="_blank" href="https://blog.xanderjakeq.page/">blog</a>
-            <a rel=external target="_blank" href="https://xanderjakeq.artstation.com/">art</a>
-            <a rel=external target="_blank" href="./sketches">sketches</a>
-            <a rel=external target="_blank" href="./commissions">commission</a>
-            <a rel=external target="_blank" href="https://github.com/xanderjakeq">github</a>
-        </nav>
-    </div>
-</div>
