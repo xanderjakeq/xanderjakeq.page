@@ -230,6 +230,7 @@
         font-family: 'Poppins';
         text-align: left;
         word-wrap: wrap;
+        font-size: 20px;
 
         line-height: normal;
 
