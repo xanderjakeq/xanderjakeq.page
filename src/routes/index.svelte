@@ -41,7 +41,7 @@
             left: 0,
             stroke: '#ddde16',
             strokeWidth: 2,
-            parent: links,
+            //parent: links,
             isShowStart: true,
             radiusY: 0,
             scaleX: { 1: 1, curve: scaleCurve },
@@ -55,10 +55,11 @@
                 const item = e.target;
                 const { x, y } = getOffSet(item);
                 const { width, height } = item.getBoundingClientRect();
+                console.log(x, y);
                 line.tune({
                     parent: item,
-                    y: height * 0.55,
-                    x: x - base_left + width * 0.5,
+                    y: y + height * 0.55,
+                    x: x + width * 0.5,
                     radiusX: width - width * 0.5,
                     strokeWidth: height * 0.1
                 }).replay();
