@@ -112,13 +112,18 @@
             <h2 class="letter_spacing_2">Xander Jake de los Santos</h2>
         </div>
         <nav id="links">
+
+            <!--
+                //classname for animation on hover
                 class="link"
+            -->
+            <a
                 rel="external"
                 target="_blank"
                 href="https://folio.xanderjakeq.page/">projects</a
             >
             <a
-                class="link"
+
                 rel="external"
                 target="_blank"
                 href="https://blog.xanderjakeq.page/">blog</a
@@ -134,13 +139,13 @@
             <a rel="external" target="_blank" href="https://www.twitch.tv/xanderjakeq">
                 twitch
             </a>
+            <a rel="external" target="_blank" href="./sketches">
                 sketches
             </a>
             <!--
             <a rel=external target="_blank" href="./commissions">commission</a>
             -->
             <a
-                class="link"
                 rel="external"
                 target="_blank"
                 href="https://github.com/xanderjakeq">github</a
@@ -215,12 +220,10 @@
         transition: all 0.2s;
     }
 
-    /*
     nav > a:hover {
         text-decoration: underline;
         opacity: 1;
     }
-    */
 
     .letter_spacing_1 {
         letter-spacing: 2vw;
