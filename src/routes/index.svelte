@@ -112,7 +112,6 @@
             <h2 class="letter_spacing_2">Xander Jake de los Santos</h2>
         </div>
         <nav id="links">
-            <a
                 class="link"
                 rel="external"
                 target="_blank"
@@ -124,13 +123,17 @@
                 target="_blank"
                 href="https://blog.xanderjakeq.page/">blog</a
             >
+            <!--
             <a
                 class="link"
                 rel="external"
                 target="_blank"
                 href="https://xanderjakeq.artstation.com/">art</a
             >
-            <a class="link" rel="external" target="_blank" href="./sketches">
+            -->
+            <a rel="external" target="_blank" href="https://www.twitch.tv/xanderjakeq">
+                twitch
+            </a>
                 sketches
             </a>
             <!--
