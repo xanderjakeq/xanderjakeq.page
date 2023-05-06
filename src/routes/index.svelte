@@ -126,7 +126,7 @@
 
                 rel="external"
                 target="_blank"
-                href="https://blog.xanderjakeq.page/">blog</a
+                href="https://notes.xanderjakeq.page/posts/">blog</a
             >
             <!--
             <a
