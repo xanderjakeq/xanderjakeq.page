@@ -4,7 +4,7 @@
 
     let MOBILE_WIDTH = 500;
 
-    let monetized = false;
+    let monetized = true;
 
     let window_width;
     $: mobile = window_width < MOBILE_WIDTH;
@@ -143,6 +143,7 @@
 {#if !hasMore}
     <footer class="flex-container-centered">
         <div>
+            <!--
             <p>
                 This is web-monetized through <a href="https://coil.com/"
                     >coil</a
@@ -151,6 +152,7 @@
                 <br />
                 <span class="emoji">🤓</span>
             </p>
+            -->
             <p>
                 <small>
                     &copy; Copyright {new Date().getUTCFullYear()}, xanderjakeq.
