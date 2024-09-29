@@ -112,7 +112,6 @@
             <h2 class="letter_spacing_2">Xander Jake de los Santos</h2>
         </div>
         <nav id="links">
-
             <!--
                 //classname for animation on hover
                 class="link"
@@ -123,10 +122,9 @@
                 href="https://folio.xanderjakeq.page/">projects</a
             >
             <a
-
                 rel="external"
                 target="_blank"
-                href="https://notes.xanderjakeq.page/posts/">blog</a
+                href="https://notes.xanderjakeq.page/">blog</a
             >
             <!--
             <a
@@ -136,12 +134,14 @@
                 href="https://xanderjakeq.artstation.com/">art</a
             >
             -->
-            <a rel="external" target="_blank" href="https://www.twitch.tv/xanderjakeq">
+            <a
+                rel="external"
+                target="_blank"
+                href="https://www.twitch.tv/xanderjakeq"
+            >
                 twitch
             </a>
-            <a rel="external" target="_blank" href="./sketches">
-                sketches
-            </a>
+            <a rel="external" target="_blank" href="./sketches"> sketches </a>
             <!--
             <a rel=external target="_blank" href="./commissions">commission</a>
             -->
