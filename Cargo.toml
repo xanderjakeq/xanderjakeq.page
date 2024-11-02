@@ -16,8 +16,9 @@ name = "home_server"
 path = "src/main.rs"
 
 [dependencies]
+askama = "0.12.1"
 eyre = "0.6.12"
-salvo = { version = "0.74.0", features = ["eyre"] }
+salvo = { version = "0.74.0", features = ["eyre", "serve-static"] }
 tokio = { version = "1.41.0", features = ["macros"] }
 tracing = "0.1.40"
 tracing-subscriber = "0.3.18"
