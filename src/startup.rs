@@ -1,5 +1,5 @@
-use salvo::conn::tcp::TcpAcceptor;
-use salvo::conn::TcpListener;
+use salvo::catcher::Catcher;
+use salvo::conn::{tcp::TcpAcceptor, TcpListener};
 use salvo::{Listener, Server};
 
 pub async fn get_server(addr: &str) -> Server<TcpAcceptor> {
