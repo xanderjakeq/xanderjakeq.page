@@ -1,0 +1,51 @@
+[tasks.format]
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--", "--check"]
+
+[tasks.clean]
+command = "cargo"
+args = ["clean"]
+
+[tasks.build]
+command = "cargo"
+args = ["build"]
+dependencies = ["clean"]
+
+[tasks.tarpaulin]
+command = "cargo"
+args = ["tarpaulin"]
+
+[tasks.audit]
+command = "cargo"
+args = ["audit"]
+
+[tasks.clippy]
+command = "cargo"
+args = ["clippy", "--", "-D", "warnings"]
+
+[tasks.test]
+command = "cargo"
+args = ["test"]
+dependencies = ["clean", "tarpaulin"]
+
+[tasks.ci]
+dependencies = ["test", "clippy", "format", "audit"]
+
+[tasks.run]
+command = "cargo"
+args = ["watch", "-x 'run'"]
+
+[tasks.tw]
+command = "npx"
+args = [
+    "tailwindcss",
+    "-i",
+    "./static/input.css",
+    "-o",
+    "./static/styles.css",
+    "--watch",
+]
+
+[tasks.pre_commit]
+dependencies = ["format", "test", "build"]
