@@ -41,11 +41,15 @@ command = "npx"
 args = [
     "tailwindcss",
     "-i",
-    "./static/input.css",
+    "./static/css/input.css",
     "-o",
-    "./static/styles.css",
+    "./static/css/tw.css",
     "--watch",
 ]
+
+[tasks.webp]
+command = "sh"
+args = ["./towebp.sh"]
 
 [tasks.pre_commit]
 dependencies = ["format", "test", "build"]

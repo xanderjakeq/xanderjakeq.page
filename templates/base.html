@@ -12,11 +12,16 @@
         content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <title>{% block title %} xanderjakeq {% endblock title %}</title>
 
+    <link rel="icon" type="image/png" href="/static/images/favicon.png" />
+
     <link href="/static/css/reset.css" rel="stylesheet" />
     <link href="/static/css/global.css" rel="stylesheet" />
+    <link href="/static/css/tw.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="font-poppins">
+    <!--firefox hack to wait for css to load https://medium.com/@fbnlsr/how-to-get-rid-of-the-flash-of-unstyled-content-d6b79bf5d75f-->
+    <script>0</script>
     {% block body %}
     <div>
         <p>
@@ -24,6 +29,17 @@
         </p>
     </div>
     {% endblock body %}
+
+
+    <footer class="px-5">
+        <div class="flex gap-3">
+            <a target="_blank" href="https://notes.xanderjakeq.page/posts">blog</a>
+            <a target="_blank" href="https://www.twitch.tv/xanderjakeq">
+                twitch
+            </a>
+            <a target="_blank" href="https://github.com/xanderjakeq">github</a>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="/static/js/htmx.js"></script>
 </body>

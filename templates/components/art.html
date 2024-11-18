@@ -1,0 +1,25 @@
+<div class="slide">
+    <div class="flex flex-col justify-center">
+        <h1 class="font-josefin_slab font-[700] text-5xl">Art</h1>
+    </div>
+    <div id="links" class="flex gap-3 mb-10">
+        <a target="_blank" href="https://cara.app/xanderjakeq">cara</a>
+    </div>
+
+    <div class="flex items-center justify-center w-full">
+        <div class="
+            grid
+            grid-cols-2 xl:grid-cols-3
+            grid-flow-row
+
+            gap-5 
+
+            w-full xl:w-[60vw] 
+            flex-shrink-0 
+            ">
+            {% for collection in artworks %}
+            {% include "thumbnail.html" %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

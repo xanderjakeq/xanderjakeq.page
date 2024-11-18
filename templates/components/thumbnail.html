@@ -1,0 +1,26 @@
+<div hx-boost="true" class="
+    overflow-hidden
+    flex
+    justify-center
+
+    aspect-square
+    ">
+    <a href="{{ collection.name }}" hx-target="main" hx-select=".slide" hx-swap="
+                    innerHTML
+                    transition:true 
+                    show:window:top">
+
+        <picture>
+            <source type="image/webp" srcset="{{ collection.links[0] }}.webp" />
+            <img src="{{ collection.links[0] }}" class="
+                h-full
+                aspect-square
+                object-cover
+
+                hover:scale-150
+                transition
+                cursor-pointer
+                " />
+        </picture>
+    </a>
+</div>

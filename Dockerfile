@@ -1,6 +1,7 @@
 FROM lukemathwalker/cargo-chef:latest AS chef
 WORKDIR /app 
 RUN apt update && apt install lld clang -y
+# do i need sccache? 
 RUN cargo install sccache --locked
 
 FROM chef AS planner
@@ -13,7 +14,7 @@ COPY --from=planner /app/recipe.json recipe.json
 RUN cargo chef cook --release --recipe-path recipe.json
 COPY . .
 ENV SQLX_OFFLINE=true
-RUN cargo build --release --bin wips_server
+RUN cargo build --release --bin home_server
 
 FROM debian:bookworm-slim AS runtime
 WORKDIR /app
@@ -26,8 +27,11 @@ RUN apt-get update -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=builder /app/target/release/wips_server wips_server
-COPY configuration configuration
+COPY --from=builder /app/target/release/home_server home_server
+COPY --from=builder /app/static/ static/
+
+# COPY configuration configuration
 
 ENV APP_ENVIRONMENT=production
-ENTRYPOINT ["./wips_server"]
+ENTRYPOINT ["./home_server"]
+EXPOSE 3000

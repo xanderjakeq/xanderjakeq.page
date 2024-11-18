@@ -1,0 +1,16 @@
+<div class="slide">
+    <div class="flex items-center justify-center w-full">
+        <div class="
+            w-full xl:w-[60vw] 
+            flex-shrink-0 
+            ">
+            {% for link in art.links %}
+            <picture>
+                <source type="image/webp" srcset="{{ link }}.webp" />
+                <img src="{{ link }}" class="my-5" />
+            </picture>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
