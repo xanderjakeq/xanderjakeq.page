@@ -11,11 +11,11 @@
     justify-center
     items-center
 
-    backdrop-blur-md
-    bg-white/30
+    backdrop-blur-lg
+    bg-white/80
 
     " hx-delete="/img/carousel" hx-target="#carousel" hx-trigger="click" hx-swap="outerHTML">
-    <div class="scale-90 max-h-full overflow-scroll">
+    <div class="scale-90 max-h-full overflow-y-scroll">
         <picture>
             <source type="image/webp" srcset="{{ collection.links[current] }}.webp" />
             <img src="{{ collection.links[current]}}" class="full" hx-trigger="click consume" />
