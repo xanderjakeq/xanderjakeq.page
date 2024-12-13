@@ -12,6 +12,15 @@ command = "cargo"
 args = ["build"]
 dependencies = ["clean"]
 
+[tasks.dbuild]
+command = "docker"
+args = ["build", ".", "-t", "home_server"]
+
+[tasks.fly-deploy]
+command = "fly"
+args = ["deploy", ".", "--local-only"]
+dependencies = ["dbuild"]
+
 [tasks.tarpaulin]
 command = "cargo"
 args = ["tarpaulin"]
