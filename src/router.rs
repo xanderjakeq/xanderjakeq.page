@@ -9,10 +9,12 @@ pub fn get_router() -> Service {
     let router = Router::new()
         .hoop(init_data)
         .get(render_index)
+        .push(Router::with_path("<section>").get(render_section))
+        .push(Router::with_path("art/<artwork>").get(render_artwork))
         .push(
-            Router::with_path("<section>")
-                .get(render_section)
-                .push(Router::with_path("<artwork>").get(render_artwork)),
+            Router::with_path("img/carousel/")
+                .get(render_carousel)
+                .delete(empty_carousel),
         )
         .push(
             Router::with_path("static/<**path>").get(StaticDir::new(["static/"]).auto_list(false)),

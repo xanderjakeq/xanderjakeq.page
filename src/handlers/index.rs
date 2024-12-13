@@ -5,7 +5,7 @@ use salvo::http::header::{self, HeaderValue};
 use salvo::{handler, http::StatusCode, writing::Text, Depot, Request, Response};
 
 use crate::handlers::get_art_images;
-use crate::templates::{About, Art, ArtCollection, ArtWork, Dev, Exp, Index};
+use crate::templates::{About, Art, ArtCollection, ArtWork, Carousel, Dev, Exp, Index};
 
 #[handler]
 pub fn render_index(req: &mut Request, res: &mut Response) {
@@ -104,4 +104,30 @@ pub fn render_artwork(req: &mut Request, res: &mut Response, depot: &mut Depot) 
             res.render(Text::Html(artwork_html_string));
         }
     }
+}
+
+#[handler]
+pub fn render_carousel(req: &mut Request, res: &mut Response, depot: &mut Depot) {
+    if let Some(collection) = req.query::<String>("collection") {
+        let index = req.query::<String>("i").unwrap();
+
+        let art_map = depot
+            .get::<HashMap<String, ArtCollection>>("artwork_map")
+            .unwrap();
+
+        let carousel_render = Carousel {
+            collection: art_map.get(&collection).unwrap(),
+            current: index.parse::<usize>().unwrap(),
+        }
+        .render();
+
+        if let Ok(carousel_html_string) = carousel_render {
+            res.render(Text::Html(carousel_html_string));
+        }
+    }
+}
+
+#[handler]
+pub fn empty_carousel(res: &mut Response) {
+    res.render(Text::Html(r#"<div id="carousel"></div>"#));
 }

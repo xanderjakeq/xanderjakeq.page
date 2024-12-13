@@ -35,3 +35,10 @@ pub struct Thumbnail<'a> {
 #[derive(Template)]
 #[template(path = "components/exp.html")]
 pub struct Exp {}
+
+#[derive(Template)]
+#[template(path = "components/carousel.html")]
+pub struct Carousel<'a> {
+    pub collection: &'a ArtCollection,
+    pub current: usize,
+}

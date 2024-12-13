@@ -4,15 +4,29 @@
     justify-center
 
     aspect-square
+    relative
     ">
+
     <a href="{{ collection.name }}" hx-target="main" hx-select=".slide" hx-swap="
                     innerHTML
                     transition:true 
                     show:window:top">
+        <div class="w-full h-full absolute top-0 left-0 bg-red-50 
+            opacity-0
+            hover:opacity-100
 
-        <picture>
-            <source type="image/webp" srcset="{{ collection.links[0] }}.webp" />
-            <img src="{{ collection.links[0] }}" class="
+            bg-opacity-0
+            hover:bg-opacity-50
+            flex justify-center items-center
+            ">
+            <h4 class="text-black text-md font-bold">{{
+                collection.name.replace("-", " ") }}</h4>
+        </div>
+    </a>
+
+    <picture>
+        <source type="image/webp" srcset="{{ collection.links[0] }}.webp" />
+        <img src="{{ collection.links[0] }}" class="
                 h-full
                 aspect-square
                 object-cover
@@ -21,6 +35,5 @@
                 transition
                 cursor-pointer
                 " />
-        </picture>
-    </a>
+    </picture>
 </div>

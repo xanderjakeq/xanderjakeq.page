@@ -5,12 +5,17 @@
             flex-shrink-0 
             ">
             {% for link in art.links %}
-            <picture>
-                <source type="image/webp" srcset="{{ link }}.webp" />
-                <img src="{{ link }}" class="my-5" />
-            </picture>
+            <a hx-get="/img/carousel?collection={{art.name}}&i={{loop.index0}}" hx-target="#carousel"
+                hx-swap="outerHTML">
+                <picture>
+                    <source type="image/webp" srcset="{{ link }}.webp" />
+                    <img src="{{ link }}" class="my-5" />
+                </picture>
+            </a>
             {% endfor %}
         </div>
+    </div>
+    <div id="carousel">
     </div>
 
 </div>
